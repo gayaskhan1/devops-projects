@@ -2,6 +2,6 @@ stage('Clone Repository') {
     steps {
         git branch: 'main',
         credentialsId: 'github-token',
-        url: 'https://github.com/gayaskhan1/devops-projects.git'
+        url: 'https://github.com/gayaskhan1/jenkins-docker-ci-cd.git'
     }
 }
