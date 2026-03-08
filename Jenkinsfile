@@ -16,6 +16,12 @@ pipeline {
             }
         }
 
+        stage('Docker Image Security Scan') {
+            steps {
+                sh 'trivy image jenkins-docker-app'
+            }
+        }
+
         stage('Run Docker Container') {
             steps {
                 sh 'docker run -d -p 8081:3000 jenkins-docker-app'
